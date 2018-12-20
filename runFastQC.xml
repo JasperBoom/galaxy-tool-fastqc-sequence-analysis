@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tool id="runFastQC" name="FastQC Sequence Analyzer:" version="0.11.7">
+    <description>
+        Use FastQC to do quality control checks on raw sequence data.
+    </description>
+    <!-- Call the runFastQC script, set input parameters according to user
+         choices. -->
+    <command interpreter="bash">
+        runFastQC.sh -f ${fisInput.rbInput}
+        #if $fisInput.rbInput == "fastq"
+            -i $fisInput.fisFastq -o $fosFastq
+        #elif $fisInput.rbInput == "zip"
+            -i $fisInput.fisZip -o $fosZip
+        #end if
+    </command>
+    <inputs>
+        <!-- Catch the input file. -->
+        <conditional name="fisInput">
+            <param name="rbInput" type="select" label="FastQ or zip?"
+                   multiple="false">
+                <option value="fastq" selected="true">FastQ file</option>
+                <option value="zip">Zip file</option>
+            </param>
+            <!-- Catch the single input file -->
+            <when value="fastq">
+                <param name="fisFastq" type="data" format="fastq"
+                       label="FastQ file."/>
+            </when>
+            <!-- Catch multiple input files -->
+            <when value="zip">
+                <param name="fisZip" type="data" format="zip"
+                       label="Zip file."/>
+            </when>
+        </conditional>
+    </inputs>
+    <outputs>
+        <!-- Catch the output file. -->
+        <data format="html" name="fosFastq" label="FastQC_Report">
+            <filter>fisInput["rbInput"] == "fastq"</filter>
+        </data>
+        <data format="html" name="fosZip" label="FastQC_Report">
+            <filter>fisInput["rbInput"] == "zip"</filter>
+        </data>
+    </outputs>
+    <tests>
+    </tests>
+    <help>
+        .. class:: infomark
+
+        The FastQC tool will do quality control checks on raw sequence data.
+        These checks include summary graphs and tables.
+
+        .. class:: warningmark
+
+        Files in fastQ format should always have a .fastq extension.
+
+--------
+
+        Source(s):
+            - **Andrews S**, FastQC: A quality control tool for high throughput
+              sequence data.
+              Babraham Bioinformatics. 2010.
+              https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+    </help>
+</tool>
