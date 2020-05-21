@@ -1,3 +1,19 @@
+<!--
+Copyright (C) 2018 Jasper Boom
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License version 3 as
+published by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+
 <?xml version="1.0" encoding="utf-8"?>
 <tool id="runFastQC" name="FastQC Sequence Analyzer:" version="0.11.7">
     <description>
@@ -53,13 +69,5 @@
         .. class:: warningmark
 
         Files in fastQ format should always have a .fastq extension.
-
---------
-
-        Source(s):
-            - **Andrews S**, FastQC: A quality control tool for high throughput
-              sequence data.
-              Babraham Bioinformatics. 2010.
-              https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
     </help>
 </tool>

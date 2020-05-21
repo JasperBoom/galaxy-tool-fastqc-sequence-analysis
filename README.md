@@ -1,4 +1,7 @@
 # galaxy-tool-fastqc-sequence-analysis
+
+__!!Repo can be deleted, copy is also kept [here](https://github.com/JasperBoom/galaxy-tools-naturalis-internship)!!.__
+
 Use FastQC to do quality control checks on raw sequence data.  
 The FastQC tool will do quality control checks on raw sequence data. These checks include summary graphs and tables.
 
@@ -53,10 +56,27 @@ sanitize_all_html: false
 ```
 
 ## Source(s)
-* __Andrews S__, FastQC: A quality control tool for high throughput sequence data.  
+* __Andrews S__,  
+  FastQC: A quality control tool for high throughput sequence data.  
   Babraham Bioinformatics. 2010.  
   [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 * __Giardine B, Riemer C, Hardison RC, Burhans R, Elnitski L, Shah P__,  
   Galaxy: A platform for interactive large-scale genome analysis.  
-  Genome Research. 2005; 15(10) 1451-1455 __doi: 10.1101/gr.4086505__  
-  [GALAXY](https://www.galaxyproject.org/)
+  Genome Research. 2005; 15(10) 1451-1455. __doi: 10.1101/gr.4086505__  
+  [Galaxy](https://www.galaxyproject.org/)
+
+```
+Copyright (C) 2018 Jasper Boom
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License version 3 as
+published by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+```
